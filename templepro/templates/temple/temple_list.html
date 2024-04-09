@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Page</title>
+</head>
+<body>
+        <ul>
+            {% for object in object_list %}
+            <li>{{ object.temple_name }}</li>
+            <li>{{ object.temple_address }}</li>
+            <li>{{ object.total_distance }}</li>
+            <li>{{ object.devotees_per_day }}</li>
+            <li>{{ object.donation_mode }}</li>
+
+            <hr/>
+            {% empty %}
+            <li>No objects yet</li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
